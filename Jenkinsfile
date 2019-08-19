@@ -8,7 +8,7 @@ node('docker') {
     archive 'target/*.jar'
   }
   stage('Static Code Analysis'){
-    sh 'mvn clean verify sonar:sonar -Dsonar.host.url=http://192.168.20.63:9000 -Dsonar.login=ac823d52fd8f04cc8900af51170c72ec4bf19fee';
+    sh 'mvn clean verify sonar:sonar -Dsonar.host.url=http://192.168.100.101:9000 -Dsonar.login=ff8e7356fb42982c6080d9e2d465e3ce2a9eeaab';
   }
   stage ('Integration Test'){
     sh 'mvn clean verify -Dsurefire.skip=true';
