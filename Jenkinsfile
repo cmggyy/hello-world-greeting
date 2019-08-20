@@ -31,7 +31,7 @@ node('docker') {
   stash includes: 'target/hello-0.0.1.war,src/pt/Hello_World_Test_Plan.jmx',
   name: 'binary'
 }
-node('dockerpt') {
+node('docker_pt') {
   stage ('Start Tomcat'){
     sh '''cd /home/jenkins/tomcat/bin
     ./startup.sh''';
