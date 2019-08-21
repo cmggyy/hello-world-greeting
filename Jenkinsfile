@@ -62,7 +62,7 @@ node ('production') {
     ./startup.sh''';
     }
 }
-
+node{
  post {
         success {
             emailext (
@@ -83,4 +83,5 @@ node ('production') {
             )
         }
     }
+  }
 
