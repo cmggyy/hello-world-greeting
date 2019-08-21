@@ -9,7 +9,7 @@ node('docker') {
   }
   stage('Static Code Analysis'){
     sh 'mvn clean verify sonar:sonar -Dsonar.projectName=example-project
--Dsonar.projectKey=example-project -Dsonar.projectVersion=$BUILD_NUMBER’ -Dsonar.host.url=http://192.168.100.101:9000 -Dsonar.login=ff8e7356fb42982c6080d9e2d465e3ce2a9eeaab';
+-Dsonar.projectKey=example-project -Dsonar.projectVersion=$BUILD_NUMBER -Dsonar.host.url=http://192.168.100.101:9000 -Dsonar.login=ff8e7356fb42982c6080d9e2d465e3ce2a9eeaab';
   }
   stage ('Integration Test'){
     sh 'mvn clean verify -Dsurefire.skip=true';
