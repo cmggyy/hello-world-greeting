@@ -58,7 +58,7 @@ node ('production') {
     sh 'cp target/hello-0.0.1.war /home/jenkins/tomcat/webapps/';
  }
     stage ('Start Tomcat'){
-    sh '''cd /opt/tomcat/bin
+    sh '''cd /home/jenkins/tomcat/bin
     ./startup.sh''';
     }
 }
