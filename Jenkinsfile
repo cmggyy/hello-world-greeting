@@ -1,5 +1,5 @@
 node('docker') {
-  stage('Poll') {
+  stage('Pull') {
     checkout scm
   }
   stage('Build & Unit test'){
